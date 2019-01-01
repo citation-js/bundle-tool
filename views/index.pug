@@ -1,0 +1,40 @@
+doctype html
+// This is a static file
+// served from your routes in server.js
+// You might want to try something fancier:
+// html/nunjucks docs: https://mozilla.github.io/nunjucks/
+// pug: https://pugjs.org/
+// haml: http://haml.info/
+// hbs(handlebars): http://handlebarsjs.com/
+html(lang='en')
+  head
+    title Citation.js Bundle tool
+    meta(name='description', content='Citation.js Bundle tool')
+    link#favicon(rel='icon', href='https://citation.js.org/favicon.png', type='image/x-icon')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/style.css')
+  body
+    header
+      h1
+        | Citation.js Bundle tool
+    main
+      p.bold Select your bundle.
+      p Please do not load the script directly from this URL, but rather download the file and host it yourself.
+        |  <kbd>Ctrl</kbd>+click to select multiple plugins.
+      form(action='bundle', method='get')
+        input(name='c', type='checkbox', checked, aria-labelledby='core')
+        label(for='c') Core functionality
+        select(name='p', multiple)
+          each plugin in plugins
+            option(value=plugin.slice('@citation-js/plugin-'.length))= plugin
+        label(for='p') Plugins
+        button(type='submit') Create Bundle
+
+    footer
+      | Made with 
+      a(href='https://glitch.com') Glitch
+      | !
+    .glitchButton(style='position:fixed;top:20px;right:20px;')
+    script(src='https://button.glitch.me/button.js')
