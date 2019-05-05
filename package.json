@@ -9,7 +9,6 @@
   "dependencies": {
     "browserify": "^16.2.3",
     "express": "^4.16.4",
-    "pkg": "^4.3.5",
     "pug": "^2.0.3"
   },
   "engines": {
@@ -20,13 +19,13 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@citation-js/core": "^0.4.0-rc.1",
-    "@citation-js/plugin-bibjson": "^0.4.0-rc.1",
-    "@citation-js/plugin-bibtex": "^0.4.0-rc.1",
-    "@citation-js/plugin-csl": "^0.4.0-rc.1",
-    "@citation-js/plugin-doi": "^0.4.0-rc.1",
-    "@citation-js/plugin-ris": "^0.4.0-rc.1",
+    "@citation-js/core": "^0.4.2",
+    "@citation-js/plugin-bibjson": "^0.4.2",
+    "@citation-js/plugin-bibtex": "^0.4.2",
+    "@citation-js/plugin-csl": "^0.4.2",
+    "@citation-js/plugin-doi": "^0.4.2",
+    "@citation-js/plugin-ris": "^0.4.2",
     "@citation-js/plugin-software-formats": "^0.3.0",
-    "@citation-js/plugin-wikidata": "^0.4.0-rc.1"
+    "@citation-js/plugin-wikidata": "^0.4.2"
   }
 }
