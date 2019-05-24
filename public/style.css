@@ -33,6 +33,10 @@ form {
   border-radius: 3px;
 }
 
+fieldset {
+  margin-bottom: 1.5em;
+}
+
 input[type='text'] {
   display: block;
   margin-bottom: 10px;

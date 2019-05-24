@@ -1,8 +1,7 @@
 const express = require('express')
 const app = express()
 const browserify = require('browserify')
-const spawn = require('child_process').spawn
-const {devDependencies: plugins} = require('./package')
+const { devDependencies: plugins } = require('./package')
 
 app.use(express.static('public'))
 app.set('views', __dirname + '/views')
@@ -14,13 +13,15 @@ app.get('/', (req, res) => {
 
 app.get('/bundle', (req, res) => {
   let core = 'c' in req.query ? '@citation-js/core' : null
+  let replacer = 'r' in req.query ? '@citation-js/replacer' : null
   let plugins = req.query.p ? req.query.p.map(plugin => `@citation-js/plugin-${plugin}`) : []
 
-  if (!core && !plugins.length) {
+  if (!core && !replacer && !plugins.length) {
     res.send('')
   }
 
   let bundle = browserify(plugins.map(require.resolve))
+  if (replacer) bundle.add(require.resolve(replacer))
   if (core) bundle.require(require.resolve(core), { expose: 'citation-js' })
 
   bundle.bundle().pipe(res)

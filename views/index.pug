@@ -23,13 +23,25 @@ html(lang='en')
       p.bold Select your bundle.
       p Please do not load the script directly from this URL, but rather download the file and host it yourself.
         |  <kbd>Ctrl</kbd>+click to select multiple plugins.
-      form(action='bundle', method='get')
-        input(name='c', type='checkbox', checked, aria-labelledby='core')
-        label(for='c') Core functionality
-        select(name='p', multiple)
-          each plugin in plugins
-            option(value=plugin.slice('@citation-js/plugin-'.length))= plugin
-        label(for='p') Plugins
+      form(action='bundle', method='get', target="_blank")
+        fieldset
+          input(name='c', type='checkbox', checked, aria-labelledby='core')
+          label(for='c', id='core') Core functionality
+          br
+
+          input(name='r', type='checkbox', aria-labelledby='replacer')
+          label(for='r', id='replacer')
+            a(href='https://github.com/citation-js/replacer') Replacer
+            |  functionality
+          br
+
+        fieldset
+          label(for='p') Plugins
+          br
+          select(name='p', multiple)
+            each plugin in plugins
+              option(value=plugin.slice('@citation-js/plugin-'.length))= plugin
+
         button(type='submit') Create Bundle
 
     footer
