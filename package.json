@@ -19,15 +19,16 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@citation-js/core": "^0.4.5",
-    "@citation-js/plugin-bibjson": "^0.4.5",
-    "@citation-js/plugin-bibtex": "^0.4.5",
-    "@citation-js/plugin-csl": "^0.4.5",
-    "@citation-js/plugin-doi": "^0.4.5",
+    "@citation-js/core": "^0.4.6",
+    "@citation-js/plugin-bibjson": "^0.4.6",
+    "@citation-js/plugin-bibtex": "^0.4.6",
+    "@citation-js/plugin-csl": "^0.4.6",
+    "@citation-js/plugin-doi": "^0.4.6",
     "@citation-js/plugin-isbn": "^0.2.0",
-    "@citation-js/plugin-ris": "^0.4.5",
+    "@citation-js/plugin-ris": "^0.4.6",
     "@citation-js/plugin-software-formats": "^0.3.2",
-    "@citation-js/plugin-wikidata": "^0.4.4",
+    "@citation-js/plugin-wikidata": "^0.4.6",
+    "@citation-js/plugin-zotero-translation-server": "0.1.0-alpha.0",
     "@citation-js/replacer": "^0.2.0"
   }
 }
