@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 app.get('/bundle', (req, res) => {
   let core = 'c' in req.query ? '@citation-js/core' : null
   let replacer = 'r' in req.query ? '@citation-js/replacer' : null
-  let plugins = req.query.p ? req.query.p.map(plugin => `@citation-js/plugin-${plugin}`) : []
+  let plugins = req.query.p ? [].concat(req.query.p).map(plugin => `@citation-js/plugin-${plugin}`) : []
 
   if (!core && !replacer && !plugins.length) {
     res.send('')
