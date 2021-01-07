@@ -1,11 +1,4 @@
 doctype html
-// This is a static file
-// served from your routes in server.js
-// You might want to try something fancier:
-// html/nunjucks docs: https://mozilla.github.io/nunjucks/
-// pug: https://pugjs.org/
-// haml: http://haml.info/
-// hbs(handlebars): http://handlebarsjs.com/
 html(lang='en')
   head
     title Citation.js Bundle tool
@@ -22,7 +15,6 @@ html(lang='en')
     main
       p.bold Select your bundle.
       p Please do not load the script directly from this URL, but rather download the file and host it yourself.
-        |  <kbd>Ctrl</kbd>+click to select multiple plugins.
       form(action='bundle', method='get', target="_blank")
         fieldset
           input(name='c', type='checkbox', checked, aria-labelledby='core')
@@ -35,17 +27,25 @@ html(lang='en')
             |  functionality
           br
 
-        fieldset
-          label(for='p') Plugins
-          br
-          select(name='p', multiple)
+        table
+          thead
+            tr
+              th
+              th Plugin
+              th Version
+          tbody
             each plugin in plugins
-              option(value=plugin.slice('@citation-js/plugin-'.length))= plugin
+              tr
+                td
+                  input(type='checkbox', value=plugin.name, name='p', id=plugin.name)
+                td
+                  label(for=plugin.name)= plugin.name
+                td= plugin.version
 
         button(type='submit') Create Bundle
 
     footer
-      | Made with 
+      | Made with
       a(href='https://glitch.com') Glitch
       | !
     .glitchButton(style='position:fixed;top:20px;right:20px;')

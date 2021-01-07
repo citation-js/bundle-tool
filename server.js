@@ -8,7 +8,14 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'pug')
 
 app.get('/', (req, res) => {
-  res.render('index', { plugins: Object.keys(plugins).filter(dep => dep.startsWith('@citation-js/plugin-')) })
+  res.render('index', {
+    plugins: Object.keys(plugins)
+      .filter(dep => dep.startsWith('@citation-js/plugin-'))
+      .map(plugin => ({
+        name: plugin.slice('@citation-js/plugin-'.length),
+        version: plugins[plugin]
+      }))
+  })
 })
 
 app.get('/bundle', (req, res) => {
