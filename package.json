@@ -7,12 +7,12 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "browserify": "^16.5.0",
+    "browserify": "^17.0.0",
     "express": "^4.17.1",
     "pug": "^3.0.2"
   },
   "engines": {
-    "node": "8.x"
+    "node": "12.x"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/juniper-coat"
@@ -24,14 +24,14 @@
     "@citation-js/plugin-bibtex": "^0.5.0",
     "@citation-js/plugin-csl": "^0.5.0",
     "@citation-js/plugin-doi": "^0.5.0",
-    "@citation-js/plugin-isbn": "^0.2.1",
-    "@citation-js/plugin-orcid": "^0.2.0",
-    "@citation-js/plugin-pubmed": "^0.1.1",
-    "@citation-js/plugin-quickstatements": "^0.3.5",
+    "@citation-js/plugin-isbn": "^0.3.0",
+    "@citation-js/plugin-orcid": "^0.3.0",
+    "@citation-js/plugin-pubmed": "^0.2.0",
+    "@citation-js/plugin-quickstatements": "^0.4.0",
     "@citation-js/plugin-ris": "^0.5.0",
-    "@citation-js/plugin-software-formats": "^0.4.2",
+    "@citation-js/plugin-software-formats": "^0.5.0-0",
     "@citation-js/plugin-wikidata": "^0.5.0",
-    "@citation-js/plugin-zotero-translation-server": "0.1.0-alpha.0",
-    "@citation-js/replacer": "^0.2.0"
+    "@citation-js/plugin-zotero-translation-server": "^0.1.0",
+    "@citation-js/replacer": "^0.3.0"
   }
 }
