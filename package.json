@@ -31,7 +31,7 @@
     "@citation-js/plugin-pubmed": "0.2.0",
     "@citation-js/plugin-quickstatements": "0.4.1",
     "@citation-js/plugin-ris": "0.5.5",
-    "@citation-js/plugin-software-formats": "0.5.2",
+    "@citation-js/plugin-software-formats": "0.5.3",
     "@citation-js/plugin-wikidata": "0.5.4",
     "@citation-js/plugin-zotero-translation-server": "0.1.0",
     "@citation-js/replacer": "0.3.0"
