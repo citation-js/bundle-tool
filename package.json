@@ -35,6 +35,7 @@
     "@citation-js/plugin-ris": "0.6.2",
     "@citation-js/plugin-software-formats": "0.6.0",
     "@citation-js/plugin-wikidata": "0.6.1",
+    "@citation-js/plugin-wikipedia-templates": "0.1.0",
     "@citation-js/plugin-zotero-translation-server": "0.2.0",
     "@citation-js/replacer": "0.3.1"
   }
