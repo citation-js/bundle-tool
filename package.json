@@ -10,7 +10,7 @@
     "@citation-js/date": "0.5.1",
     "@citation-js/name": "0.4.2",
     "browserify": "^17.0.0",
-    "express": "^4.17.1",
+    "express": "^4.21.2",
     "pug": "^3.0.2"
   },
   "engines": {
