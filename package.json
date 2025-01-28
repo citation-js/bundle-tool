@@ -25,10 +25,13 @@
     "@citation-js/plugin-bibjson": "0.7.18",
     "@citation-js/plugin-bibtex": "0.7.18",
     "@citation-js/plugin-csl": "0.7.18",
+    "@citation-js/plugin-cff": "0.6.1",
     "@citation-js/plugin-doi": "0.7.18",
     "@citation-js/plugin-enw": "0.3.0",
+    "@citation-js/plugin-github": "0.6.1",
     "@citation-js/plugin-hayagriva": "0.1.2",
     "@citation-js/plugin-isbn": "0.4.0",
+    "@citation-js/plugin-npm": "0.6.1",
     "@citation-js/plugin-orcid": "0.3.1",
     "@citation-js/plugin-pubmed": "0.3.0",
     "@citation-js/plugin-quickstatements": "0.5.4",
@@ -38,6 +41,8 @@
     "@citation-js/plugin-software-formats": "0.6.1",
     "@citation-js/plugin-wikidata": "0.7.18",
     "@citation-js/plugin-wikipedia-templates": "0.1.0",
+    "@citation-js/plugin-yaml": "0.6.1",
+    "@citation-js/plugin-zenodo": "0.6.1",
     "@citation-js/plugin-zotero-translation-server": "0.2.0",
     "@citation-js/replacer": "0.3.1"
   }
