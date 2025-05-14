@@ -34,7 +34,7 @@
     "@citation-js/plugin-npm": "0.6.1",
     "@citation-js/plugin-orcid": "0.3.1",
     "@citation-js/plugin-pubmed": "0.3.0",
-    "@citation-js/plugin-quickstatements": "0.5.4",
+    "@citation-js/plugin-quickstatements": "0.5.5",
     "@citation-js/plugin-refer": "0.2.0",
     "@citation-js/plugin-refworks": "0.1.2",
     "@citation-js/plugin-ris": "0.7.18",
