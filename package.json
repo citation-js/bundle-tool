@@ -41,7 +41,7 @@
     "@citation-js/plugin-refworks": "0.1.2",
     "@citation-js/plugin-ris": "0.7.18",
     "@citation-js/plugin-software-formats": "0.6.1",
-    "@citation-js/plugin-wikidata": "0.7.19",
+    "@citation-js/plugin-wikidata": "0.7.20",
     "@citation-js/plugin-wikipedia-templates": "0.1.0",
     "@citation-js/plugin-yaml": "0.6.1",
     "@citation-js/plugin-zenodo": "0.6.1",
