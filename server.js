@@ -30,6 +30,7 @@ app.get('/bundle', (req, res) => {
   let bundle = browserify(plugins.map(require.resolve))
   if (replacer) bundle.add(require.resolve(replacer))
   if (core) bundle.require(require.resolve(core), { expose: 'citation-js' })
+  bundle.ignore(require.resolve('node-fetch'))
 
   bundle.bundle().pipe(res)
 })
