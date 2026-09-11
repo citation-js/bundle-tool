@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const browserify = require('browserify')
+const esmify = require('esmify')
 const { devDependencies: plugins } = require('./package')
 
 app.use(express.static('public'))
@@ -27,7 +28,11 @@ app.get('/bundle', (req, res) => {
     res.send('')
   }
 
-  let bundle = browserify(plugins.map(require.resolve))
+  let bundle = browserify(plugins.map(require.resolve), {
+    plugin: [
+      [esmify]
+    ]
+  })
   if (replacer) bundle.add(require.resolve(replacer))
   if (core) bundle.require(require.resolve(core), { expose: 'citation-js' })
   bundle.ignore(require.resolve('node-fetch'))
