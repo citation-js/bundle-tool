@@ -37,7 +37,9 @@ app.get('/bundle', (req, res) => {
   if (core) bundle.require(require.resolve(core), { expose: 'citation-js' })
   bundle.ignore(require.resolve('node-fetch'))
 
-  bundle.bundle().pipe(res)
+  const stream = bundle.bundle()
+  stream.on('error', e => { res.status(500).send(e) })
+  stream.pipe(res)
 })
 
 const listener = app.listen(process.env.PORT, function() {
