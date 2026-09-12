@@ -30,7 +30,7 @@ app.get('/bundle', (req, res) => {
 
   let bundle = browserify(plugins.map(require.resolve), {
     plugin: [
-      [esmify]
+      [esmify, { mainFields: ['browser', 'main', 'module'] }]
     ]
   })
   if (replacer) bundle.add(require.resolve(replacer))
