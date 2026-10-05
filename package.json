@@ -17,36 +17,36 @@
     "pug": "^3.0.2"
   },
   "engines": {
-    "node": "20.x"
+    "node": ">=22.10.0"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/juniper-coat"
   },
   "license": "MIT",
   "devDependencies": {
-    "@citation-js/core": "0.8.2",
-    "@citation-js/plugin-bibjson": "0.8.2",
-    "@citation-js/plugin-bibtex": "0.8.2",
-    "@citation-js/plugin-cff": "0.7.1",
-    "@citation-js/plugin-csl": "0.8.2",
-    "@citation-js/plugin-doi": "0.8.2",
-    "@citation-js/plugin-enw": "0.3.0",
-    "@citation-js/plugin-github": "0.7.1",
-    "@citation-js/plugin-hayagriva": "0.1.2",
-    "@citation-js/plugin-isbn": "0.4.0",
-    "@citation-js/plugin-npm": "0.7.1",
-    "@citation-js/plugin-orcid": "0.3.1",
-    "@citation-js/plugin-pubmed": "0.3.0",
-    "@citation-js/plugin-quickstatements": "0.6.0",
-    "@citation-js/plugin-refer": "0.2.0",
-    "@citation-js/plugin-refworks": "0.1.2",
-    "@citation-js/plugin-ris": "0.8.2",
-    "@citation-js/plugin-software-formats": "0.7.1",
-    "@citation-js/plugin-wikidata": "0.8.2",
-    "@citation-js/plugin-wikipedia-templates": "0.1.0",
-    "@citation-js/plugin-yaml": "0.7.1",
-    "@citation-js/plugin-zenodo": "0.7.1",
-    "@citation-js/plugin-zotero-translation-server": "0.2.0",
-    "@citation-js/replacer": "0.3.1"
+    "@citation-js/core": "0.9.0",
+    "@citation-js/plugin-bibjson": "0.9.0",
+    "@citation-js/plugin-bibtex": "0.9.0",
+    "@citation-js/plugin-cff": "0.7.3",
+    "@citation-js/plugin-csl": "0.9.0",
+    "@citation-js/plugin-doi": "0.9.0",
+    "@citation-js/plugin-enw": "0.4.0",
+    "@citation-js/plugin-github": "0.7.2",
+    "@citation-js/plugin-hayagriva": "0.2.0",
+    "@citation-js/plugin-isbn": "0.5.0",
+    "@citation-js/plugin-npm": "0.7.2",
+    "@citation-js/plugin-orcid": "0.4.0",
+    "@citation-js/plugin-pubmed": "0.4.0",
+    "@citation-js/plugin-quickstatements": "0.7.0",
+    "@citation-js/plugin-refer": "0.3.0",
+    "@citation-js/plugin-refworks": "0.2.0",
+    "@citation-js/plugin-ris": "0.9.0",
+    "@citation-js/plugin-software-formats": "0.7.3",
+    "@citation-js/plugin-wikidata": "0.9.0",
+    "@citation-js/plugin-wikipedia-templates": "0.2.0",
+    "@citation-js/plugin-yaml": "0.7.3",
+    "@citation-js/plugin-zenodo": "0.7.3",
+    "@citation-js/plugin-zotero-translation-server": "0.3.0",
+    "@citation-js/replacer": "0.4.0"
   }
 }
