@@ -4,8 +4,7 @@
   "description": "Citation.js Bundle tool.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "postinstall": "patch-package"
+    "start": "node server.js"
   },
   "dependencies": {
     "@citation-js/date": "0.5.1",
@@ -13,8 +12,17 @@
     "browserify": "^17.0.0",
     "esmify": "^2.1.1",
     "express": "^5.2.1",
-    "patch-package": "^8.0.0",
     "pug": "^3.0.2"
+  },
+  "overrides": {
+    "browserify": {
+      "browser-resolve": {
+        "resolve": "next"
+      },
+      "module-deps": {
+        "resolve": "next"
+      }
+    }
   },
   "engines": {
     "node": ">=22.10.0"
@@ -48,5 +56,8 @@
     "@citation-js/plugin-zenodo": "0.7.3",
     "@citation-js/plugin-zotero-translation-server": "0.3.0",
     "@citation-js/replacer": "0.4.0"
+  },
+  "allowScripts": {
+    "core-js": false
   }
 }

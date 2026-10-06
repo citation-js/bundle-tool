@@ -35,7 +35,6 @@ app.get('/bundle', (req, res) => {
   })
   if (replacer) bundle.add(require.resolve(replacer))
   if (core) bundle.require(require.resolve(core), { expose: 'citation-js' })
-  bundle.ignore(require.resolve('node-fetch'))
 
   const stream = bundle.bundle()
   stream.on('error', e => { res.status(500).send(e) })
