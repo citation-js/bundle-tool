@@ -7,9 +7,12 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "@babel/core": "^8.0.6",
+    "@babel/preset-env": "^8.0.6",
     "@citation-js/date": "0.5.1",
     "@citation-js/name": "0.4.2",
     "browserify": "^17.0.0",
+    "babelify": "larsgw/babelify",
     "esmify": "^2.1.1",
     "express": "^5.2.1",
     "pug": "^3.0.2"
