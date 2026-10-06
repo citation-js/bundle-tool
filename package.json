@@ -1,6 +1,6 @@
 {
   "name": "@citation-js/bundle-tool",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Citation.js Bundle tool.",
   "main": "server.js",
   "scripts": {
