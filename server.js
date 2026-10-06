@@ -2,7 +2,6 @@ const express = require('express')
 const app = express()
 const browserify = require('browserify')
 const babelify = require('babelify')
-const esmify = require('esmify')
 const { devDependencies: plugins } = require('./package')
 
 app.use(express.static('public'))
@@ -30,30 +29,21 @@ app.get('/bundle', (req, res) => {
     res.send('')
   }
 
-  const config = {
-    plugin: []
-  }
-
-  if (babel) {
-    config.plugin.push([esmify, { mainFields: ['browser', 'main', 'module'] }])
-  }
-
   let bundle = browserify(plugins.map(require.resolve))
   if (replacer) bundle.add(require.resolve(replacer))
   if (core) bundle.require(require.resolve(core), { expose: 'citation-js' })
 
-  if (babel) {
-    bundle.transform(babelify, {
-      global: true,
-      presets: [
-        ['@babel/env', {
-          modules: 'commonjs',
-          targets: { browsers: ['> 0.5%', 'last 5 versions', 'ie >= 10'] }
-        }]
-      ],
-      comments: false
-    })
-  }
+  const babelTargets = babel ? { browsers: ['> 0.5%', 'last 5 versions', 'ie >= 10'] } : undefined
+  bundle.transform(babelify, {
+    global: true,
+    comments: false,
+    presets: [
+      ['@babel/env', {
+        modules: 'commonjs',
+        targets: babelTargets
+      }]
+    ]
+  })
 
   const stream = bundle.bundle()
   stream.on('error', e => { res.status(500).send(e) })
